@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#345FFB</color>
+    <color name="colorPrimaryDark">#325BF0</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="mvvm_textColorPrimary">#38475B</color>
+    <color name="mvvm_textColorSecondary">#778390</color>
+    <color name="mvvm_textColorThird">#BABFB6</color>
+    <color name="mvvm_textColorGrey">#B4BBC2</color>
+
+    <color name="mvvm_white">#ffffff</color>
+    <color name="mvvm_transparent">#00000000</color>
+</resources>
