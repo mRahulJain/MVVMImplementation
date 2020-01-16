@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:overScrollMode="never"
+    android:fillViewport="true"
+    tools:context=".view.InitialAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFeatured"
+            android:textSize="26sp"
+            android:textColor="@color/mvvm_textColorPrimary"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:text="Near you" />
+
+        <TextView
+            android:id="@+id/tvViewFeatured"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/tvFeatured"
+            android:gravity="center_vertical"
+            android:layout_alignBottom="@id/tvFeatured"
+            android:textSize="16dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="20dp"
+            android:text="SEE ALL" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFeatured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_below="@id/tvFeatured" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCategories"
+            android:layout_below="@id/rvFeatured"
+            android:layout_marginStart="16dp"
+            android:textSize="26sp"
+            android:textColor="@color/mvvm_textColorPrimary"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:text="Categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="10dp"
+            android:layout_below="@id/tvCategories" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

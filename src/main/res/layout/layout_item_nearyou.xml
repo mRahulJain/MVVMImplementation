@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="10dp"
+        >
+        <ImageView
+            android:id="@+id/imgWalk1"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/food" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvFeatureName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@id/cardImg"
+        android:layout_below="@id/cardImg"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/mvvm_textColorPrimary"
+        android:layout_marginStart="8dp"
+        tools:text="Business management" />
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvFeatureName"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/mvvm_textColorPrimary"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        tools:text="$90" />
+    <TextView
+        android:id="@+id/tvStrikePrice"
+        android:layout_toEndOf="@id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/cardImg"
+        android:layout_alignBottom="@id/tvPrice"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="1dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/mvvm_textColorThird"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="2dp"
+        tools:text="$90" />
+
+
+
+</RelativeLayout>
