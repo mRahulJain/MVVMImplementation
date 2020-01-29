@@ -13,8 +13,8 @@ data class weatherP(
 )
 
 data class Sys(
-    val sunrise : String,
-    val sunset : String,
+    val sunrise : Long,
+    val sunset : Long,
     val country : String
 )
 

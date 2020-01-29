@@ -9,6 +9,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -39,11 +40,21 @@ class InitialAct : AppCompatActivity(), LocationListener {
     private val LOCATION_REQ = 123
     private val CHECK_REQ = 121
     lateinit var categoryViewModel : categoriesViewModel
+    var check = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)
         checkUserSettingsAndGetLocation()
+
+        refresh.setOnRefreshListener {
+            Handler().postDelayed({
+                refresh.isRefreshing = false
+                check = 0
+                checkAndStartLocationUpdates()
+            }, 2000)
+        }
+
     }
 
     inner class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -86,7 +97,8 @@ class InitialAct : AppCompatActivity(), LocationListener {
 
     private fun observeViewModel() {
         categoryViewModel.loading.observe(this, Observer {
-            if(it == false) {
+            if(it == false && check == 0) {
+                check = 1
                 progressBar.isVisible = false
                 currentLocationWeather.isVisible = true
                 var adapter = ViewPagerAdapter(supportFragmentManager)

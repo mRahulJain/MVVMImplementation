@@ -7,36 +7,41 @@
     android:orientation="vertical"
     android:background="#F6F7FA"
     tools:context=".view.InitialAct">
-    <FrameLayout
-        android:orientation="vertical"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
+        android:id="@+id/refresh"
         android:layout_height="match_parent">
-        <com.android.mvvmimplementation.utils.verticalViewPager
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:id="@+id/currentLocationWeather"/>
-        <LinearLayout
-            android:id="@+id/progressBar"
-            android:layout_gravity="center"
+        <FrameLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.android.mvvmimplementation.utils.verticalViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/currentLocationWeather"/>
+            <LinearLayout
+                android:id="@+id/progressBar"
                 android:layout_gravity="center"
-                android:indeterminateDrawable="@drawable/loader"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_marginTop="24dp"
-                android:textSize="18sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Please wait...\nWe are fetching your location for better results"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="24dp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Please wait...\nWe are fetching your location for better results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
-    </FrameLayout>
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>
