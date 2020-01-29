@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_above="@id/tvSwipe"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="#778390"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvSwipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#778390"
+        android:text="Swipe up to see detailed weather analysis"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_above="@id/ivArrow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadoe"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="40dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:src="@drawable/weather"
+                        android:scaleType="fitXY" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mvvm_textColorPrimary"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginTop="32dp"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:id="@+id/placeName"
+                            android:layout_gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="Place Name" />
+
+                        <ImageView
+                            android:id="@+id/weatherType"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="18dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_rect"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="26dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="2dp"
+                                    android:tint="@color/mvvm_textColorSecondary"
+                                    android:src="@drawable/pressure"/>
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20sp"
+                                    android:textColor="@android:color/black"
+                                    android:id="@+id/tempPressure"
+                                    android:textStyle="bold"
+                                    android:text="25 Pascal" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/mvvm_textColorSecondary"
+                                    android:text="Pressure" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="70dp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="5dp"
+                                    android:tint="@color/mvvm_textColorSecondary"
+                                    android:src="@drawable/celsius" />
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="32sp"
+                                    android:textColor="@android:color/black"
+                                    android:id="@+id/tempCelsius"
+                                    android:textStyle="bold"
+                                    android:text="25\u2103" />
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:textSize="20sp"
+                                    android:id="@+id/main"
+                                    android:textColor="@color/mvvm_textColorSecondary"
+                                    android:text="Main" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:padding="5dp"
+                                    android:tint="@color/mvvm_textColorSecondary"
+                                    android:src="@drawable/humidity" />
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20sp"
+                                    android:textColor="@android:color/black"
+                                    android:id="@+id/tempHumidity"
+                                    android:textStyle="bold"
+                                    android:text="25%" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/mvvm_textColorSecondary"
+                                    android:text="Humidity" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:id="@+id/swipeDown"
+            app:layout_anchor="@id/llContent"
+            android:src="@drawable/ic_keyboard_arrow_up"
+            app:backgroundTint="#4268B1"
+            app:layout_anchorGravity="bottom|center_horizontal" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
+

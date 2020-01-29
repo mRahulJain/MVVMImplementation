@@ -1,4 +1,4 @@
-package com.mvvmzomato.mvvmimplementation.model
+package com.android.mvvmimplementation.model
 
 import retrofit2.Call
 import retrofit2.Callback

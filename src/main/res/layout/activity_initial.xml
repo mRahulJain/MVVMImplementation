@@ -1,77 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:overScrollMode="never"
-    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="#F6F7FA"
     tools:context=".view.InitialAct">
-
-    <RelativeLayout
+    <FrameLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="50dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvFeatured"
-            android:textSize="26sp"
-            android:textColor="@color/mvvm_textColorPrimary"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:textStyle="bold"
-            android:text="Near you" />
-
-        <TextView
-            android:id="@+id/tvViewFeatured"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@id/tvFeatured"
-            android:gravity="center_vertical"
-            android:layout_alignBottom="@id/tvFeatured"
-            android:textSize="16dp"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginEnd="20dp"
-            android:text="SEE ALL" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvFeatured"
+        android:layout_height="match_parent">
+        <com.android.mvvmimplementation.utils.verticalViewPager
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:overScrollMode="never"
-            android:clipToPadding="false"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:layout_below="@id/tvFeatured" />
-
-        <TextView
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/currentLocationWeather"/>
+        <LinearLayout
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvCategories"
-            android:layout_below="@id/rvFeatured"
-            android:layout_marginStart="16dp"
-            android:textSize="26sp"
-            android:textColor="@color/mvvm_textColorPrimary"
-            android:layout_marginTop="16dp"
-            android:textStyle="bold"
-            android:text="Categories" />
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Please wait...\nWe are fetching your location for better results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCategories"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:overScrollMode="never"
-            android:clipToPadding="false"
-            android:layout_marginTop="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="10dp"
-            android:layout_below="@id/tvCategories" />
+    </FrameLayout>
 
-    </RelativeLayout>
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.mvvmzomato.mvvmimplementation.model
+package com.android.mvvmimplementation.model
 
 data class weatherP(
     val coord : coordinate,
@@ -7,8 +7,15 @@ data class weatherP(
     val main : mainC,
     val visibility : String,
     val wind : windC,
+    val sys : Sys,
     val name : String,
     val id : String
+)
+
+data class Sys(
+    val sunrise : String,
+    val sunset : String,
+    val country : String
 )
 
 data class coordinate(

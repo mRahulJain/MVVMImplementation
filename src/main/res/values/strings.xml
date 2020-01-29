@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Zom</string>
     <string name="api_key">211ea7257466473e2656daaceff392ff</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

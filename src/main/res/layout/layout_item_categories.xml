@@ -13,7 +13,7 @@
         android:background="@drawable/background_category_circle_white"
         android:backgroundTint="@color/mvvm_white"
         android:padding="18dp"
-        android:src="@drawable/food"/>
+        android:src="@drawable/rainyday"/>
     <TextView
         android:id="@+id/tvCategoryName"
         android:layout_width="match_parent"

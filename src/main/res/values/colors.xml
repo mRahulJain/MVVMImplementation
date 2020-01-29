@@ -10,5 +10,6 @@
     <color name="mvvm_textColorGrey">#B4BBC2</color>
 
     <color name="mvvm_white">#ffffff</color>
+    <color name="mvvm_black">#000000</color>
     <color name="mvvm_transparent">#00000000</color>
 </resources>

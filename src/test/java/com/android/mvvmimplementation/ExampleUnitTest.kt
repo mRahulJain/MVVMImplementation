@@ -1,4 +1,4 @@
-package com.mvvmzomato.mvvmimplementation
+package com.android.mvvmimplementation
 
 import org.junit.Test
 

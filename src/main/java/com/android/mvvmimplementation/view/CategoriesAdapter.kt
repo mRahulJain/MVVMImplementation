@@ -1,15 +1,12 @@
-package com.mvvmzomato.mvvmimplementation.view
+package com.android.mvvmimplementation.view
 
 import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.mvvmzomato.mvvmimplementation.R
-import com.mvvmzomato.mvvmimplementation.model.weatherP
+import com.android.mvvmimplementation.R
+import com.android.mvvmimplementation.model.weatherP
 import kotlinx.android.synthetic.main.layout_item_categories.view.*
 
 class CategoriesAdapter(val context: Context, var nameList: weatherP) : RecyclerView.Adapter<CategoriesAdapter.NameViewHolder>() {

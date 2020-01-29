@@ -22,7 +22,7 @@
             android:id="@+id/imgWalk1"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:src="@drawable/food" />
+            android:src="@drawable/rainyday" />
 
     </androidx.cardview.widget.CardView>
     <TextView

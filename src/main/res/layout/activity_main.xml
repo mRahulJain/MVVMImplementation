@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/mvvm_white"
+    android:background="@color/mvvm_black"
     tools:context=".view.MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -50,7 +50,7 @@
                 android:id="@+id/vpWalkthough"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/food"/>
+                android:src="@drawable/rainyday"/>
         </FrameLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -74,7 +74,7 @@
             android:layout_marginEnd="12dp"
             android:gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:textColor="@color/mvvm_textColorPrimary"
+            android:textColor="@color/mvvm_textColorThird"
             android:textSize="30sp"
             android:textStyle="bold"
             android:text="Welcome" />
@@ -92,7 +92,7 @@
             android:lineSpacingExtra="4dp"
             android:textColor="@color/mvvm_textColorSecondary"
             android:textSize="20sp"
-            android:text="Browse your favourite restaurants, cuisines, dine-outs and much more..." />
+            android:text="Get the best weather forecast details of your area." />
     </RelativeLayout>
 
     <Button
@@ -104,6 +104,7 @@
         android:text="Get Started"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/background_button_transparent"
         android:paddingStart="26dp"
         android:paddingEnd="26dp"
