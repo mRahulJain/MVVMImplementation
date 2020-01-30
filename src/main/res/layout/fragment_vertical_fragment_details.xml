@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_above="@id/llBottom"
+            android:layout_above="@id/searchButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -183,7 +183,6 @@
                 <LinearLayout
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <LinearLayout
@@ -195,8 +194,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -228,8 +227,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -268,8 +267,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -301,8 +300,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -341,8 +340,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -374,8 +373,8 @@
                         <LinearLayout
                             android:layout_marginRight="34dp"
                             android:layout_marginLeft="34dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginBottom="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -420,7 +419,7 @@
             android:padding="4dp"
             android:layout_margin="8dp"/>
         <LinearLayout
-            android:id="@+id/llBottom"
+            android:id="@+id/searchButton"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"

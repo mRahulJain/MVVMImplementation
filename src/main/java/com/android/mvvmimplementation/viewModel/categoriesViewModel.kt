@@ -39,6 +39,31 @@ class categoriesViewModel : ViewModel() {
     fun refresh(myLat : Double, myLong: Double) {
         fetchData(myLat, myLong)
     }
+    fun refresh(placeName : String) {
+        fetchData(placeName)
+    }
+
+    private fun fetchData(placeName : String) {
+        loading.value = true
+        weatherService.getWeather(placeName)
+            .enqueue(retrofitCallback{ throwable, response ->
+                response?.let {
+                    if(it.isSuccessful) {
+                        dataFetched = it.body()!!
+                        loading.value = false
+                        dataLoadError.value = false
+                    } else {
+                        dataLoadError.value = true
+                        loading.value = true
+                        Log.d("myCHECK", it.message())
+                    }
+                }
+                throwable?.let {
+                    Log.d("myCHECK", "INSIDE THROWABLE")
+                    Log.d("myCHECK", it.localizedMessage)
+                }
+            })
+    }
 
     private fun fetchData(myLat: Double, myLong: Double) {
         loading.value = true

@@ -45,13 +45,28 @@ class InitialAct : AppCompatActivity(), LocationListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)
-        checkUserSettingsAndGetLocation()
+
+        progressBar.isVisible = true
+        currentLocationWeather.isVisible = false
+
+        var placeName = intent.getStringExtra("placeName")
+        val type = intent.getStringExtra("type")
+        if(type == "start") {
+            displayMessage.setText("Please wait...\nWe are fetching your location for better results")
+            checkUserSettingsAndGetLocation()
+        } else {
+            displayMessage.setText("Please wait...\nWe are fetching the location for better results")
+            categoryViewModel = ViewModelProviders.of(this).get(categoriesViewModel::class.java)
+            categoryViewModel.refresh(placeName)
+            check = 0
+            observeViewModel()
+        }
 
         refresh.setOnRefreshListener {
             Handler().postDelayed({
                 refresh.isRefreshing = false
                 check = 0
-                checkAndStartLocationUpdates()
+                checkUserSettingsAndGetLocation()
             }, 2000)
         }
 

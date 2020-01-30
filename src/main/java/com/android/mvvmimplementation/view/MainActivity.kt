@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
 
         btnGetStarted.setOnClickListener {
             val intent = Intent(this, InitialAct::class.java)
+            intent.putExtra("type", "start")
+            intent.putExtra("placeName", "")
             startActivity(intent)
+            finish()
         }
     }
 }

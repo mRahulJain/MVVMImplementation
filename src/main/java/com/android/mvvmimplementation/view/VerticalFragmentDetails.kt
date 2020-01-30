@@ -1,6 +1,7 @@
 package com.android.mvvmimplementation.view
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +12,6 @@ import com.android.mvvmimplementation.model.weatherP
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_vertical_fragment_details.view.*
 import java.util.*
-import kotlin.time.hours
 
 class VerticalFragmentDetails(dataFetched : weatherP) : Fragment() {
 
@@ -56,6 +56,11 @@ class VerticalFragmentDetails(dataFetched : weatherP) : Fragment() {
 
         view!!.ivClose.setOnClickListener {
             (activity as InitialAct).closeContent()
+        }
+
+        view!!.searchButton.setOnClickListener {
+            val intent = Intent(view!!.context, SearchActivity::class.java)
+            startActivity(intent)
         }
         return view
     }
