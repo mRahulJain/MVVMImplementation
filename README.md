@@ -1,4 +1,4 @@
-# MVVMImplementation
+-> # MVVMImplementation <-
 A small weather application, which is made using the Model View - View Model (MVVM) architecture of android.
 <h1>Layout</h1>
 <p>
